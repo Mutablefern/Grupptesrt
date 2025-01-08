@@ -13,7 +13,8 @@ public class ShootyPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("KeyCode Q"))
+        
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             Instantiate(projectiles[0], transform.position, Quaternion.identity);  
         }
