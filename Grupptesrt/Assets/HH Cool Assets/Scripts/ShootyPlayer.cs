@@ -33,24 +33,23 @@ public class ShootyPlayer : MonoBehaviour
             playerState = 1;
             playerRB.linearVelocityX = -acceleration;
         }
-        else if
-        (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             playerState = 1;
             playerRB.linearVelocityX = acceleration;
         }
-        else if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             playerState = 1;
             playerRB.linearVelocityY = acceleration;
         }
-        else if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             playerState = 1;
             playerRB.linearVelocityY = -acceleration;
-            
+
         }
-        else
+        if (!Input.anyKey)
         {
             playerState = 0;
         }
@@ -66,6 +65,9 @@ public class ShootyPlayer : MonoBehaviour
 
             case 1:
 
+                break;
+            case 2:
+                playerRB.linearVelocityX = 0;
                 break;
         }
     }
